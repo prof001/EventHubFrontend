@@ -1,0 +1,11 @@
+#registerForm {
+  background-color: #D4D8DC;
+  padding: 25px;
+}
+
+.row {
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
