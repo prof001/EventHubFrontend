@@ -1,1 +1,15 @@
-<p>regular-events works!</p>
+<div class="row">
+  <div class="col-md-3 mt-3" *ngFor="let event of events">
+    <div class="card">
+      <div class="card-header bg-dark text-white">
+        Regular Event
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{event.name}}</h5>
+        <p class="card-text">{{event.description}}</p>
+        <p class="card-text"><b>{{event.date}}</b></p>
+        <a class="btn btn-primary text-white">Register</a>
+      </div>
+    </div>
+  </div>
+</div>

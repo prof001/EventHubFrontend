@@ -4,12 +4,13 @@ import {RegisterComponent} from './register/register.component';
 import {LoginComponent} from './login/login.component';
 import {RegularEventsComponent} from './regular-events/regular-events.component';
 import {SpecialEventsComponent} from './special-events/special-events.component';
+import {AuthGuard} from './shared/auth.guard';
 
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'regular',
     pathMatch: 'full'
   },
   {
@@ -21,12 +22,13 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'regular-events',
+    path: 'regular',
     component: RegularEventsComponent
   },
   {
-    path: 'special-events',
-    component: SpecialEventsComponent
+    path: 'special',
+    component: SpecialEventsComponent,
+    canActivate: [AuthGuard]
   }
 ];
 
